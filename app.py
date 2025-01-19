@@ -3,16 +3,16 @@ import pickle
 import numpy as np
 
 # Load the saved Random Forest model
-# model_filename = 'random_forest_model.pkl'
-# with open(model_filename, 'rb') as file:
-#     model = pickle.load(file)
+model_filename = 'random_forest_model.pkl'
+with open(model_filename, 'rb') as file:
+    model = pickle.load(file)
 
-# App title
+
 st.title('Insurance Premium Prediction')
 
-"""
 
-# Input fields for user data
+
+
 st.header('Enter the details to predict the insurance premium:')
 age = st.number_input('Age', min_value=18, max_value=66, step=1)
 height = st.number_input('Height (cm)', min_value=145, max_value=188, step=1)
@@ -25,10 +25,10 @@ allergies = st.selectbox('Known Allergies', [0, 1])
 cancer_history = st.selectbox('History of Cancer in Family', [0, 1])
 major_surgeries = st.number_input('Number of Major Surgeries', min_value=0, max_value=3, step=1)
 
-# Calculate BMI
+
 bmi = weight / ((height / 100) ** 2)
 
-# Make prediction when the user clicks the button
+
 if st.button('Predict Premium'):
     # Prepare the input as a 2D array
     input_data = np.array([[age, diabetes, blood_pressure, transplants, chronic_diseases,
@@ -43,4 +43,4 @@ if st.button('Predict Premium'):
     st.success(f'Estimated Insurance Premium: ${prediction:,.2f}')
 
     
-"""
+
