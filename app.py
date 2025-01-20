@@ -17,8 +17,8 @@ col1, col2 = st.columns(2)
 # Inputs in the first column
 with col1:
     age = st.selectbox('Age', options=list(range(18, 67)))  # Dropdown for Age
-    height = st.number_input('Height (cm)', min_value=145, max_value=188, step=1)
-    weight = st.number_input('Weight (kg)', min_value=51, max_value=132, step=1)
+    height = st.selectbox('Height (cm)', options=list(range(145, 189)))  # Dropdown for Height
+    weight = st.selectbox('Weight (kg)', options=list(range(51, 133)))  # Dropdown for Weight
     diabetes = st.selectbox('Diabetes', options=[0, 1], help="0: No, 1: Yes")
     blood_pressure = st.selectbox('Blood Pressure Problems', options=[0, 1], help="0: No, 1: Yes")
 
@@ -28,7 +28,7 @@ with col2:
     chronic_diseases = st.selectbox('Any Chronic Diseases', options=[0, 1], help="0: No, 1: Yes")
     allergies = st.selectbox('Known Allergies', options=[0, 1], help="0: No, 1: Yes")
     cancer_history = st.selectbox('History of Cancer in Family', options=[0, 1], help="0: No, 1: Yes")
-    major_surgeries = st.selectbox('Number of Major Surgeries', options=list(range(0, 4)))
+    major_surgeries = st.selectbox('Number of Major Surgeries', options=list(range(0, 4)))  # Dropdown for Surgeries
 
 # Calculate BMI
 bmi = weight / ((height / 100) ** 2)
@@ -51,5 +51,4 @@ if st.button('Predict Premium'):
 
     # Display the result
     st.success(f'Estimated Insurance Premium: {original_prediction:,.2f}')
-
     
