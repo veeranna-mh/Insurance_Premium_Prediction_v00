@@ -47,5 +47,4 @@ if st.button('Predict Premium'):
     max_val = 40000  # Replace with actual max value from your data
     original_prediction = (prediction * (max_val - min_val)) + min_val
 
-    st.success(f'Estimated Insurance Premium: ${original_prediction:,.2f}')
-    
+    st.success(f'Estimated Insurance Premium: {original_prediction:,.2f}')
