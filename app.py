@@ -39,7 +39,7 @@ if st.button('Predict Premium'):
     input_data = np.array([[age, diabetes, blood_pressure, transplants, chronic_diseases,
                             height, weight, allergies, cancer_history, major_surgeries, bmi]])
     # Transform the input using PolynomialFeatures
-    input_poly = poly_degree2.transform(input_data)
+    input_poly = poly.transform(input_data)
 
     # Make prediction
     prediction = model.predict(input_poly)[0]
