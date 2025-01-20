@@ -17,8 +17,8 @@ col1, col2 = st.columns(2)
 # Inputs in the first column
 with col1:
     age = st.selectbox('Age', options=list(range(18, 67)))  # Dropdown for Age
-    height = st.selectbox('Height (cm)', options=list(range(145, 189)))  # Dropdown for Height
-    weight = st.selectbox('Weight (kg)', options=list(range(51, 133)))  # Dropdown for Weight
+    height = st.selectbox('Height (cm)', options=list(range(140, 190)))  # Dropdown for Height
+    weight = st.selectbox('Weight (kg)', options=list(range(31, 150)))  # Dropdown for Weight
     diabetes = st.selectbox('Diabetes', options=[0, 1], help="0: No, 1: Yes")
     blood_pressure = st.selectbox('Blood Pressure Problems', options=[0, 1], help="0: No, 1: Yes")
 
@@ -51,4 +51,4 @@ if st.button('Predict Premium'):
 
     # Display the result
     st.success(f'Estimated Insurance Premium: {original_prediction:,.2f}')
-    
+
