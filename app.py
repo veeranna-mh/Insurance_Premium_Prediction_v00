@@ -44,11 +44,11 @@ if st.button('Predict Premium'):
     # Make prediction
     prediction = model.predict(input_poly)[0]
 
-    # Convert prediction back to original scale
-    min_val = 15000  # Replace with actual min value from your data
-    max_val = 40000  # Replace with actual max value from your data
-    original_prediction = (prediction * (max_val - min_val)) + min_val
+    # # Convert prediction back to original scale
+    # min_val = 15000  # Replace with actual min value from your data
+    # max_val = 40000  # Replace with actual max value from your data
+    # original_prediction = (prediction * (max_val - min_val)) + min_val
 
     # Display the result
-    st.success(f'Estimated Insurance Premium: {original_prediction:,.2f}')
+    st.success(f'Estimated Insurance Premium: {prediction:,.2f}')
 
