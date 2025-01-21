@@ -46,4 +46,4 @@ if st.button('Predict Premium'):
     prediction = model.predict(input_poly)[0]
     
     # Display the result
-    st.success(f'Estimated Insurance Premium: ${prediction:,.2f}')
+    st.success(f'Estimated Insurance Premium: {prediction:,.2f}')
