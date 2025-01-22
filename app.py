@@ -30,14 +30,14 @@ with col2:
     cancer_history = st.selectbox('History of Cancer in Family', options=[0, 1], help="0: No, 1: Yes.")
     major_surgeries = st.selectbox('Number of Major Surgeries', options=list(range(0, 4)), help="Select the number of major surgeries (0-3).")
 
-# Calculate BMI
-bmi = weight / ((height / 100) ** 2)
+# # Calculate BMI
+# bmi = weight / ((height / 100) ** 2)
 
 # Make prediction when the user clicks the button
 if st.button('Predict Premium'):
     # Prepare the input data
     input_data = np.array([[age, diabetes, blood_pressure, transplants, chronic_diseases,
-                            height, weight, allergies, cancer_history, major_surgeries, bmi]])
+                            height, weight, allergies, cancer_history, major_surgeries]])
     
     # Transform the input data using the loaded PolynomialFeatures transformer
     input_poly = poly.transform(input_data)
