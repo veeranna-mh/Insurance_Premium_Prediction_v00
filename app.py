@@ -47,3 +47,4 @@ if st.button('Predict Premium'):
     
     # Display the result
     st.success(f'Estimated Insurance Premium: {prediction:,.2f}')
+
