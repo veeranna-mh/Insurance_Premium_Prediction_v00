@@ -23,10 +23,11 @@ with col1:
     weight = st.selectbox('Weight (kg)', options=list(range(41, 161)), help="Select weight in kg (41-160).")
     # Dropdown for Diabetes
     diabetes = st.selectbox('Diabetes', options=[0, 1], help="0: No, 1: Yes.")
-
-with col2:
     # Dropdown for Blood Pressure Problems
     blood_pressure = st.selectbox('Blood Pressure Problems', options=[0, 1], help="0: No, 1: Yes.")
+
+with col2:
+    
     # Dropdown for Any Transplants
     transplants = st.selectbox('Any Transplants', options=[0, 1], help="0: No, 1: Yes.")
     # Dropdown for Chronic Diseases
@@ -35,9 +36,10 @@ with col2:
     allergies = st.selectbox('Known Allergies', options=[0, 1], help="0: No, 1: Yes.")
     # Dropdown for History of Cancer in Family
     cancer_history = st.selectbox('History of Cancer in Family', options=[0, 1], help="0: No, 1: Yes.")
+    # Dropdown for Number of Major Surgeries
+    major_surgeries = st.selectbox('Number of Major Surgeries', options=list(range(0, 4)), help="Select the number of major surgeries (0-3).")
 
-# Dropdown for Number of Major Surgeries
-major_surgeries = st.selectbox('Number of Major Surgeries', options=list(range(0, 4)), help="Select the number of major surgeries (0-3).")
+
 
 # When user clicks the "Predict" button
 if st.button('Predict Premium'):
